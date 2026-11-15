@@ -26,6 +26,7 @@ INTERVAL_S  =    3.0   # Sleep time between updates
 LOW_RPM     =  400     # Target RPM should not go below this
 MID_RPM     =  800     # Target RPM under low to moderate load
 MAX_RPM     = 1600     # Target RPM under maximum load
+RPM_STEP    =   50     # RPM Increment
 
 # driver name, sensor label, TLow, TMid, TMax
 SENSORS = [
@@ -147,8 +148,9 @@ class Operator:
                 else:
                     self.interpolate_raise_target(t, sensor['tMid'], sensor['tMax'], MID_RPM, MAX_RPM)
 
-            # Don't bother setting micro-changes, just steps of 50 rpm
-            self.target_rpm = round(self.target_rpm / 50) * 50
+            # Set to next-best increment, then clamp in case a weird config puts that out of range.
+            self.target_rpm = round(self.target_rpm / RPM_STEP) * RPM_STEP
+            self.target_rpm = max(LOW_RPM, min(MAX_RPM, self.target_rpm))
             self.apply_target()
             
             if print_info:
