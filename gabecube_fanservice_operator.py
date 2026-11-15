@@ -156,7 +156,7 @@ class Operator:
                 print("| Current    " + "   ".join(f"{k} = {v:.1f}" for k, v in self.current_temps.items()))
                 print("| Trailing   " + "   ".join(f"{k} = {v:.1f}" for k, v in self.trailing_temps.items()))
 
-            notify_system(f"STATUS=target{self.target_rpm} rpm -- actual {actual_rpm} rpm")
+            notify_system(f"STATUS=target {self.target_rpm} rpm -- actual {actual_rpm} rpm")
             time.sleep(INTERVAL_S)
             notify_system("WATCHDOG=1")  # Reassure system that we are still operating
 

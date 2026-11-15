@@ -1,8 +1,4 @@
-# Scope
-
-Applies to the operator written in Python, not the driver, which is GPL v2.
-
-# License (MIT)
+# The MIT License (MIT)
 
 Copyright 2026 Georg R.K. Michna
 

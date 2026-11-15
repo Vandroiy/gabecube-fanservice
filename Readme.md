@@ -1,8 +1,8 @@
 # Gabecube (Valve Steam Machine) Fanservice
 
-This is a fan controller for the Valve Steam Machine aka Gabecube, made for Debian. (And potentially related Linux ditributions.) It uses trailing temperature readings from the CPU and GPU to approximate load on the main heat sink.
+This is a fan controller for the Valve Steam Machine aka Gabecube, made for Debian. (And potentially related Linux distributions.) It uses trailing temperature readings from the CPU and GPU to approximate load on the main heat sink.
 
-The Steam Machine's firmware fan curve runs far too fast on idle. Steam OS apparently takes control of the fan from software. So installing a standard OS like Debian leads to unnecessary noise and potential dust buildup. This little service fixes that.
+The Steam Machine's firmware fan curve runs far too fast on idle. SteamOS apparently takes control of the fan from software. So installing a standard OS like Debian leads to unnecessary noise and potential dust buildup. This little service fixes that.
 
 
 ## 1. Caveats
@@ -23,6 +23,8 @@ If you have any concerns, examine the code and reconfigure it as needed.
 
 For Debian and related distros, you should be able to just install the included `.deb` driver file. It should fetch the matching `linux-headers-` such as `generic` or `amd64`, then recompile automatically for your system and its future updates.
 
+Terminal: `sudo apt install ./driver/steamdeck-dkms_6.8.12-valve2+2_amd64.deb`
+
 Driver source: https://github.com/firlin123/steamdeck-dkms (Commit 99737c4)
 
 The driver is unchanged and added only for convenience. It is GPL-2-licensed and the source is in the `.deb` file. (Via DKMS.) Refer to the original repo for any driver issues or changes.
@@ -32,9 +34,9 @@ The driver is unchanged and added only for convenience. It is GPL-2-licensed and
 
 You need Python 3.
 
-Then run: `python3 gabecube_fanservice_operator.py install`
+Then run: `sudo python3 gabecube_fanservice_operator.py install`
 
-That should set everything up. Using `uninstall` will remove it again. And `console-run` lets you run it from the terminal, but make sure it isn't installed, or else you'll have two instances fighting over the fan.
+That should set everything up. Using `uninstall` will remove the operator again. And `console-run` lets you run it from the terminal, but make sure it isn't installed, or else you'll have two instances fighting over the fan.
 
 Note that the fan operator gets copied on install, so if you want to change parameters and then run the changed file as a service, you need to reinstall it.
 
