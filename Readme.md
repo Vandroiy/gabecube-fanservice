@@ -38,7 +38,9 @@ Then run: `sudo python3 gabecube_fanservice_operator.py install`
 
 That should set everything up. Using `uninstall` will remove the operator again. And `console-run` lets you run it from the terminal, but make sure it isn't installed, or else you'll have two instances fighting over the fan.
 
-Note that the fan operator gets copied on install, so if you want to change parameters and then run the changed file as a service, you need to reinstall it.
+**Various parameters are configuable near the top of the python file.**
+
+The fan operator gets copied on install, so if you want to change parameters and then run the changed file as a service, you need to reinstall it.
 
 
 ## Credits
