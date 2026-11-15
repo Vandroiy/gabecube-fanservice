@@ -15,7 +15,7 @@ then run the operator once in install mode. The rest should be automatic.
 """
 
 # Author:   Georg Michna
-# License:  MIT, see Readme.md
+# License:  MIT, see License.md
 
 import os, signal, socket, sys, shutil, subprocess, time, glob
 from datetime import datetime
