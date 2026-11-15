@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Fan control for the Valve Steam Machine aka Gabecube.
+By Georg Michna; MIT License (see Readme.md)
 
 Takes one argument, to select mode. Modes are:
 
@@ -12,11 +13,15 @@ Takes one argument, to select mode. Modes are:
 For normal use, all you need to do is ensure the driver is installed,
 then run the operator once in install mode. The rest should be automatic.
 """
+
+# Author:   Georg Michna
+# License:  MIT, see Readme.md
+
 import os, signal, socket, sys, shutil, subprocess, time, glob
 from datetime import datetime
 
 # == CONSTANTS =====================================================================
-HALFLIFE_S  =   36     # Time until half effect after a temperature change
+HALFLIFE_S  =   33     # Time until half effect after a temperature change
 INTERVAL_S  =    3.0   # Sleep time between updates
 LOW_RPM     =  400     # Target RPM should not go below this
 MID_RPM     =  800     # Target RPM under low to moderate load
