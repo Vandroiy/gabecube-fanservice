@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Fan control for the Valve Steam Machine aka Gabecube.
-By Georg Michna; MIT License (see Readme.md)
 
 Takes one argument, to select mode. Modes are:
 
