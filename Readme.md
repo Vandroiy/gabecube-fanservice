@@ -47,6 +47,22 @@ The fan operator gets copied on install, so if you want to change parameters and
 
 Written by Georg Michna, with research and prototyping by Claude Opus 5.5 (Anthropic AI).
 
-I did type the code and readme by hand, but knew almost nothing about Python syntax and the relevant APIs, so Claude did a lot of the work by finding and explaining details.
 
-License: MIT. Apart from the external driver. See: License.md
+**Update, before more herp derp AI speculations are raised:**
+
+I made the foolish error of posting about this on Reddit. Thus, I encountered *the typical Redditors*, who aren't interested in using this, but entertain themselves by throwing around baseless accusations. For example, how undisclosed parts of this could have been written by AI, maybe my messages too, or how I'm not attributing correctly by saying "I wrote" this. To hopefully end this noise, I'm expanding on the earlier elaboration how AI was used.
+
+ - *Written by* means I physically typed everything with a keyboard, including documentation. I may have used single-word IDE autocomplete, but as of 2026-11-16, no AI IDE integration, nor any pasting of generated or otherwise external code or documentation. (Apart from the driver and licenses.)
+ - *Research* means that Claude searched and presented relevant information. This enabled me to identify the driver and relevant APIs quickly.
+ - *Prototyping* means that Claude generated example code that I looked at as I implemented this.
+ - I am not a Python programmer and so asked Claude syntax questions.
+ - I also showed Claude my work in progress and it offered some suggestions.
+
+So is this *written by AI*? Technically no. Philosophically, that's your interpretation. Of course a program that has large parts for wiring specific APIs will have structural similarities to an AI-written prototype for it. And Claude was very helpful with this, which is why I credited it here.
+
+In practice, this comes down to a simple question: why do you care?
+
+ - If you care whether a human has intentionally considered and written every element, then this is the case.
+ - If you care whether AI has had substantial input into the process of making it, then this is also the case.
+
+Beyond this point, we'd be debating philosophy and definitions, not fixing hardware control issues. Please only contact me with constructive and relevant feedback, not unsubstantiated slander.
